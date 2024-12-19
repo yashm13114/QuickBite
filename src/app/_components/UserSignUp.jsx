@@ -304,6 +304,7 @@ const UserSignUp = ({ onToggle }) => {
                     </div>
                 </div>
             </div>
+            <div></div>
         </div>
     );
 }
