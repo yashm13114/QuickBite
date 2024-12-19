@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import DeliveryHeader from '../_components/deliveryHeader';
+// import DeliveryHeader from '../_components/deliveryHeader';
 
 
 const Page = (props) => {
@@ -77,7 +77,7 @@ const Page = (props) => {
 
     return (
         <>
-        <DeliveryHeader/>
+        {/* <DeliveryHeader/> */}
             <div>
                 <div className="min-h-screen flex justify-center items-center bg-black relative">
                     {/* Background Image */}
