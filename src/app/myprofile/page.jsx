@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import CustomerHeader from "../_components/CustomerHeader";
-import Footer from "../_components/Footer";
 
 const Page = () => {
     const [myOrders, setMyOrders] = useState([]);
@@ -19,6 +18,7 @@ const Page = () => {
             let data = await response.json();
             if (data.success) {
                 setMyOrders(data.result);
+                console.log(data.result)
             } else {
                 console.error("Failed to fetch orders");
             }
@@ -69,21 +69,20 @@ const Page = () => {
                                         <div className="flex items-center">
                                             {/* Order Image */}
                                             <img
-                                                src={item.data.image}
-                                                alt={item.data.name}
+                                                src={item?.data?.image || "https://via.placeholder.com/150"}
+                                                alt={item?.data?.name || "Order image"}
                                                 className="w-20 h-20 rounded-md object-cover mr-4"
                                             />
                                             {/* Order Info */}
                                             <div>
-                                                <h2 className="text-xl font-semibold">{item.data.name}</h2>
-                                                <p>Qty: {item.data.quantity} | Price: Rs. {item.amount}</p>
+                                                <h2 className="text-xl font-semibold">{item?.data?.name || "Unknown Item"}</h2>
+                                                <p>Price: Rs. {item?.amount || 0}</p>
                                             </div>
                                         </div>
                                         {/* Order Status */}
                                         <div className="mt-4 md:mt-0 text-right">
-
                                             Status: <p className="text-green-500 font-semibold">
-                                                {item.status === "confirmed" ? "Confirmed" : item.status}
+                                                {item?.status === "confirmed" ? "Confirmed" : item?.status || "Unknown"}
                                             </p>
                                         </div>
                                     </div>
@@ -92,6 +91,7 @@ const Page = () => {
                         ) : (
                             <p>No orders found.</p>
                         )}
+
                     </div>
                 </div>
             </div>

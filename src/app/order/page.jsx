@@ -176,7 +176,7 @@ const OrderPage = () => {
                     </div>
                     <div className="mb-4">
                         <span className="text-lg font-semibold">Mobile Number:</span>
-                        <span className="text-lg ml-2">{userStorage.mobile}</span>
+                        <span className="text-lg ml-2">{userStorage.mobileNumber}</span>
                     </div>
                 </div>
 
@@ -186,11 +186,11 @@ const OrderPage = () => {
                         <h1 className="text-2xl font-bold mb-6">Amount Details</h1>
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-lg font-semibold">Subtotal:</span>
-                            <span className="text-lg">${subtotal.toFixed(2)}</span>
+                            <span className="text-lg">₹{subtotal.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-lg font-semibold">Sales Tax (10%):</span>
-                            <span className="text-lg">${salesTax.toFixed(2)}</span>
+                            <span className="text-lg">₹{salesTax.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-lg font-semibold">Coupon Code:</span>
@@ -198,14 +198,14 @@ const OrderPage = () => {
                         </div>
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-xl font-bold">Grand Total:</span>
-                            <span className="text-xl font-bold">${total.toFixed(2)}</span>
+                            <span className="text-xl font-bold">₹{total.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-center items-center mb-4">
                             <h1 className="text-xl font-semibold">Payment Method:</h1>
                         </div>
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-lg">Cash on Delivery:</span>
-                            <span className="text-lg">${total.toFixed(2)}</span>
+                            <span className="text-lg">₹{total.toFixed(2)}</span>
                         </div>
                         <button onClick={orderNow} className="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-300">
                             Place your order now

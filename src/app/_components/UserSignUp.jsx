@@ -232,7 +232,7 @@ const UserSignUp = ({ onToggle }) => {
             <div className="relative z-10 w-full md:w-1/2 lg:w-2/5 flex items-center justify-center px-6 py-6">
                 <div className="max-w-sm w-full bg-white p-6 rounded-lg shadow-lg bg-opacity-80">
                     <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">
-                        Welcome to <span className="text-green-500">FoodMood!</span>
+                        Welcome to <span className="text-green-500">QuickBite!</span>
                     </h2>
                     <p className="text-gray-500 text-center mb-6">Sign up with your personal details</p>
                     

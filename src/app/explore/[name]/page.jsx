@@ -51,6 +51,9 @@ const Page = (props) => {
     return (
         <>
             <CustomerHeader cartData={cartData} removeCartData={removeCartData} />
+
+
+            
             <section
                 className="bg-cover bg-center bg-no-repeat bg-[url('https://static.vecteezy.com/system/resources/previews/002/001/840/non_2x/food-delivery-service-design-vector.jpg')] 
   bg-gray-700 bg-blend-multiply min-h-screen flex items-center">
