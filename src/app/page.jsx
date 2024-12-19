@@ -139,7 +139,7 @@ export default function Home() {
 
   const loadRestaurants = async (params) => {
     // let url = 'http://localhost:3000/api/customer';
-    let url = `${process.env.NEXT_PUBLIC_BASED_API_URL}/api/customer`;
+    let url = `https://quick-bite-8fh2.vercel.app/api/customer`;
     if (params?.location) {
       url += `?location=${params.location}`;
     }
@@ -165,9 +165,7 @@ export default function Home() {
       loadRestaurants({ location: selectedLocation });
     }
   };
-  if(!process.env.NEXT_PUBLIC_BASED_API_URL){
-    return null;
-  }
+  
   return (
     <div>
       <CustomerHeader />
