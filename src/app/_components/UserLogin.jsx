@@ -8,7 +8,7 @@ const UserLogin = ({ onToggle,props }) => {
 
     const handleLogin = async (e) => {
         e.preventDefault(); // Prevent default form submission
-        let response = await fetch("/api/user/login/", {
+        let response = await fetch(`${process.env.NEXT_PUBLIC_BASED_API_URL}/api/user/login/`, {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: {
