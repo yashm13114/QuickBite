@@ -26,7 +26,7 @@ const Page = () => {
     }
 
     try {
-      let response = await fetch(`http://localhost:3000/api/deliverypartners/orders/${deliveryId}`);
+      let response = await fetch(`/api/deliverypartners/orders/${deliveryId}`);
       let data = await response.json();
       console.log(data); // Inspect the response for debugging
 

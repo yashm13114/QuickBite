@@ -138,7 +138,8 @@ export default function Home() {
   }, []);
 
   const loadRestaurants = async (params) => {
-    let url = 'http://localhost:3000/api/customer';
+    // let url = 'http://localhost:3000/api/customer';
+    let url = `${process.env.NEXT_PUBLIC_BASED_API_URL}/api/customer`;
     if (params?.location) {
       url += `?location=${params.location}`;
     }
@@ -164,7 +165,9 @@ export default function Home() {
       loadRestaurants({ location: selectedLocation });
     }
   };
-
+  if(!process.env.NEXT_PUBLIC_BASED_API_URL){
+    return null;
+  }
   return (
     <div>
       <CustomerHeader />
@@ -224,6 +227,7 @@ export default function Home() {
                   View Menu
                 </button>
               </div>
+              
             </div>
           </div>
         ))}

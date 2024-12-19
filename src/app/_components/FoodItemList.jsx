@@ -15,7 +15,7 @@ const FoodItemList = () => {
     const loadFoodItems = async () => {
         const restaurantData = JSON.parse(localStorage.getItem("restaurantUser"));
         const resto_id = restaurantData._id;
-        const response = await fetch(`http://localhost:3000/api/restaurant/foods/${resto_id}`);
+        const response = await fetch(`/api/restaurant/foods/${resto_id}`);
         const data = await response.json();
         if (data.success) {
             setFoodItems(data.result);
@@ -36,7 +36,7 @@ const FoodItemList = () => {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/api/restaurant/foods/${selectedItem}`, {
+            const response = await fetch(`/api/restaurant/foods/${selectedItem}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const FoodItemList = () => {
 
     const confirmEdit = async(updatedData) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/restaurant/foods/${selectedItem}`, {
+            const response = await fetch(`/api/restaurant/foods/${selectedItem}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const Page = (props) => {
     },[])
     const handleLogin = async (e) => {
         e.preventDefault(); // Prevent default form submission
-        let response = await fetch("http://localhost:3000/api/deliverypartners/login", {
+        let response = await fetch("/api/deliverypartners/login", {
             method: 'POST',
             body: JSON.stringify({ mobile: loginmobile, password: loginpassword }), // Use loginmobile and loginpassword
             headers: {

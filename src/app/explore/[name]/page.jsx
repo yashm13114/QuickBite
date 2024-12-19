@@ -26,7 +26,7 @@ const Page = (props) => {
 
     const loadRestaurantDetails = async () => {
         const id = props.searchParams.id;
-        let res = await fetch("http://localhost:3000/api/customer/" + id);
+        let res = await fetch("/api/customer/" + id);
         res = await res.json();
         if (res.success) {
             setRestaurantDetails(res.details);
@@ -53,7 +53,7 @@ const Page = (props) => {
             <CustomerHeader cartData={cartData} removeCartData={removeCartData} />
 
 
-            
+
             <section
                 className="bg-cover bg-center bg-no-repeat bg-[url('https://static.vecteezy.com/system/resources/previews/002/001/840/non_2x/food-delivery-service-design-vector.jpg')] 
   bg-gray-700 bg-blend-multiply min-h-screen flex items-center">
