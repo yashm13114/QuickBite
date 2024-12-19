@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DeliveryHeader = () => {
+export const DeliveryHeader = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [user, setUser] = useState(undefined);
 
@@ -96,4 +96,4 @@ const DeliveryHeader = () => {
     );
 };
 
-export default DeliveryHeader;
+
