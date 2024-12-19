@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-// import DeliveryHeader from '../_components/deliveryHeader';
 import { useRouter } from 'next/navigation';
 
 const Page = () => {
@@ -43,7 +42,6 @@ const Page = () => {
 
   return (
     <>
-      {/* <DeliveryHeader /> */}
       <div
         className="min-h-screen bg-cover bg-center"
         style={{
