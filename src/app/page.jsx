@@ -165,7 +165,8 @@ export default function Home() {
       loadRestaurants({ location: selectedLocation });
     }
   };
-  
+
+
   return (
     <div>
       <CustomerHeader />
