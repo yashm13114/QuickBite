@@ -139,7 +139,7 @@ export default function Home() {
 
   const loadRestaurants = async (params) => {
     // let url = 'http://localhost:3000/api/customer';
-    let url =`${process.env.DOMAIN}/api/customer`;
+    let url =`/api/customer/`;
     if (params?.location) {
       url += `?location=${params.location}`;
     }
