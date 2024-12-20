@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Footer from './Footer';
 
 const UserLogin = ({ onToggle,props }) => {
     const router = useRouter();
@@ -35,6 +36,7 @@ const UserLogin = ({ onToggle,props }) => {
     
 
     return (
+        <>
         <div className="min-h-screen flex justify-center items-center bg-black relative">
             {/* Background Image */}
             <div className="absolute inset-0">
@@ -92,6 +94,7 @@ const UserLogin = ({ onToggle,props }) => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
