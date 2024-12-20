@@ -17,7 +17,7 @@ const EditFoodItems = (props) => {
 
     const handleLoadFoodItem = async () => {
         try {
-            const res = await fetch(`/api/restaurant/foods/edit/${props.params.id}`);
+            const res = await fetch(`/api/restaurant/foods/edit/${props.params.id}/`);
             const data = await res.json();
             console.log(data); // Check the structure of the data returned
             if (data.success) {

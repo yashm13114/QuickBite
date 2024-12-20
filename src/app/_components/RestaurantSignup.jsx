@@ -255,7 +255,7 @@ const RestaurantSignup = ({ setLogin }) => {
     }
 
     setError(false);
-    let response = await fetch('/api/restaurant', {
+    let response = await fetch('/api/restaurant/', {
       method: 'POST',
       body: JSON.stringify({ email, password, name, city, address, contact, image }), // Send image path
       headers: {

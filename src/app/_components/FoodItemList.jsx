@@ -15,7 +15,7 @@ const FoodItemList = () => {
     const loadFoodItems = async () => {
         const restaurantData = JSON.parse(localStorage.getItem("restaurantUser"));
         const resto_id = restaurantData._id;
-        const response = await fetch(`/api/restaurant/foods/${resto_id}`);
+        const response = await fetch(`/api/restaurant/foods/${resto_id}/`);
         const data = await response.json();
         if (data.success) {
             setFoodItems(data.result);

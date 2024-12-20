@@ -269,7 +269,7 @@ const OrderPage = () => {
         let resto_id = cart[0]?.resto_id;
 
         try {
-            let deliveryBoyResponse = await fetch(`/api/deliverypartners/${city}`);
+            let deliveryBoyResponse = await fetch(`/api/deliverypartners/${city}/`);
             let deliveryBoyData = await deliveryBoyResponse.json();
 
             if (deliveryBoyData.result.length === 0) {

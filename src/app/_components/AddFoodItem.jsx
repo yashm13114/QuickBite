@@ -35,7 +35,7 @@ const AddFoodItem = () => {
         console.log('Sending data to server:', foodData); // Log data to be sent
 
         try {
-            const response = await fetch('/api/restaurant/foods', {
+            const response = await fetch('/api/restaurant/foods/', {
                 method: 'POST',
                 body: JSON.stringify(foodData),
                 headers: {
