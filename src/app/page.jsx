@@ -172,7 +172,8 @@ export default function Home() {
       <CustomerHeader />
       
       <div>
-        <section className="bg-cover bg-center bg-no-repeat bg-[url('https://www.bitesbee.com/wp-content/uploads/2021/09/banner-3.jpg')] bg-gray-700 bg-blend-multiply">
+       
+        <section className="bg-cover bg-center bg-no-repeat bg-[url('https://img95.lovepik.com/photo/40105/7176.gif_wh860.gif')] bg-gray-700 bg-blend-multiply">
           <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
             {displayedText}
