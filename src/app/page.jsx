@@ -173,36 +173,37 @@ export default function Home() {
       
       <div>
        
-        <section className="bg-cover bg-center bg-no-repeat bg-[url('https://img95.lovepik.com/photo/40105/7176.gif_wh860.gif')] bg-gray-700 bg-blend-multiply">
-          <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-            {displayedText}
-            </h1>
+      <section className="bg-cover bg-center bg-no-repeat bg-gray-700 bg-blend-multiply sm:bg-[url('https://www.bitesbee.com/wp-content/uploads/2021/09/banner-3.jpg')] bg-[url('https://img95.lovepik.com/photo/40105/7176.gif_wh860.gif')]">
+  <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+    <h1 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+      {displayedText}
+    </h1>
 
-            <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              <select
-                onChange={handleLocationChange}
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-              >
-                <option value="">Select area</option>
-                {locations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
+    <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+      <select
+        onChange={handleLocationChange}
+        className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+      >
+        <option value="">Select area</option>
+        {locations.map((location) => (
+          <option key={location} value={location}>
+            {location}
+          </option>
+        ))}
+      </select>
 
-              <input
-                type="text"
-                onChange={(e) => {
-                  loadRestaurants({ restaurant: e.target.value });
-                }}
-                placeholder="Enter food and restaurant name"
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-              />
-            </div>
-          </div>
-        </section>
+      <input
+        type="text"
+        onChange={(e) => {
+          loadRestaurants({ restaurant: e.target.value });
+        }}
+        placeholder="Enter food and restaurant name"
+        className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+      />
+    </div>
+  </div>
+</section>
+
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
